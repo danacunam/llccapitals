@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+@font-face {
+  font-family: "Charlevoix pro";
+  src: url("../fonts/CharlevoixPro-Regular.otf") format(otf);
+}
+body {
+  font-family: Charlevoix pro, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.subtitle {
+  font-weight: 300;
+}
+
+.title {
+  font-size: 1.6rem;
+}
+
+.ps-3, .contacto, .faqs, .servicios, .mid-banner, .company {
+  padding: 0 2rem;
+}
+
+.pb-3, .faqs, .servicios, .company {
+  padding-bottom: 3rem;
+}
+
+.section-title, .faqs .title, .servicios .titles .title, .company .title {
+  color: #464458;
+}
+
+a {
+  width: 11rem;
+  height: 3rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.primary {
+  background-color: #AB9356;
+  color: white;
+}
+a.primary:hover {
+  background-color: white;
+  color: #464458;
+}
+a.primary:visited {
+  background-color: #AB9356;
+  color: white;
+}
+a.secondary {
+  background-color: white;
+  color: #464458;
+}
+a.secondary:hover {
+  background-color: #AB9356;
+  color: white;
+}
+a.secondary:visited {
+  background-color: white;
+  color: #464458;
+}
+a.whatsapp {
+  position: sticky;
+  top: 90vh;
+  left: 85vw;
+  color: white;
+  background-color: #25D366;
+  width: 3.2rem;
+  z-index: 1;
+  opacity: 0;
+}
+a.whatsapp i {
+  font-size: 3rem;
+}
+a.whatsapp.visible {
+  animation: visible 0.5s ease-in-out forwards;
+}
+
+header {
+  position: absolute;
+  display: grid;
+  align-items: center;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 70px auto;
+}
+header.menu-header {
+  background-color: #464458;
+}
+header .logo {
+  width: 50px;
+  margin-top: 0.8rem;
+  margin-left: 2rem;
+}
+header .menu-button {
+  background: none;
+  border: none;
+  justify-self: end;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+header .menu-button i {
+  font-size: 2.5rem;
+  color: white;
+}
+header ul {
+  grid-column: 1/3;
+  list-style: none;
+  width: 100%;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #464458;
+  position: relative;
+  z-index: 2;
+  display: none;
+}
+header ul .nav-link {
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: auto;
+}
+header ul.showMenu {
+  display: flex;
+  animation: deploy 0.3s forwards ease-in-out;
+}
+
+@keyframes deploy {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 50vh;
+  }
+}
+@keyframes faqreveal {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100px;
+  }
+}
+@keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.main {
+  height: 90vh;
+  display: grid;
+  background-image: url("../assets/mobile-back.webp");
+  grid-template-rows: 42vh auto auto;
+  background-size: cover;
+  justify-items: center;
+  align-items: center;
+}
+.main .titles {
+  position: relative;
+  top: 3rem;
+  align-self: end;
+  text-align: center;
+  color: white;
+  padding: 0 2rem;
+}
+.main .titles .subtitle {
+  margin-bottom: 1rem;
+}
+.main button {
+  position: relative;
+  top: 5rem;
+}
+.main a {
+  margin-top: 3rem;
+}
+.main a i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.company {
+  display: grid;
+  grid-template-rows: 6rem auto;
+}
+.company .title {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: center;
+  justify-self: center;
+}
+.company .info-text {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.company .info-text p {
+  margin-bottom: 0.5rem;
+}
+.company .back-company {
+  max-width: 100%;
+  grid-column: 1/2;
+  align-self: center;
+  grid-row: 2/3;
+  filter: saturate(0);
+  opacity: 0.07;
+}
+
+.mid-banner {
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: url(../assets/nyc-empire.jpg) #464458;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-position: bottom center;
+  margin-bottom: 3rem;
+}
+.mid-banner .titles {
+  margin-top: 5rem;
+}
+.mid-banner .titles .title {
+  color: white;
+}
+.mid-banner .buttons {
+  margin: 4rem;
+  display: flex;
+}
+.mid-banner .buttons a {
+  margin: 0 1rem;
+}
+
+.servicios {
+  display: grid;
+  justify-items: center;
+}
+.servicios .titles .title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.servicios .servicios-cards {
+  margin-top: 1rem;
+}
+.servicios .servicios-cards .servicio-card {
+  display: grid;
+  box-shadow: 5px 5px 30 px -20px rgba(0, 0, 0, 0.18);
+  border-radius: 2rem;
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+  width: 80vw;
+  grid-template-columns: 5rem 1fr;
+}
+.servicios .servicios-cards .servicio-card .icon {
+  width: 4rem;
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.servicios .servicios-cards .servicio-card .service-card-title {
+  grid-column: 2/3;
+  font-size: 1.3em;
+}
+.servicios .servicios-cards .servicio-card .service-card-text {
+  grid-column: 2/3;
+  margin-top: 1rem;
+}
+
+.faqs {
+  background-color: rgba(171, 147, 86, 0.1);
+  background: url(../assets/nyc-empire.jpg) rgba(171, 147, 86, 0.06);
+  background-size: contain;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.faqs .title {
+  margin-top: 3rem;
+}
+.faqs .preguntas {
+  margin-top: 3rem;
+  width: 90%;
+}
+.faqs .preguntas .pregunta {
+  margin: 1rem 0;
+}
+.faqs .preguntas .pregunta.active .pregunta-head {
+  color: #AB9356;
+  font-weight: 400;
+}
+.faqs .preguntas .pregunta.active .pregunta-bottom .respuesta {
+  display: block;
+  animation: faqreveal 0.5s ease forwards;
+}
+.faqs .preguntas .pregunta .pregunta-bottom {
+  color: #464458;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.faqs .preguntas .pregunta .pregunta-bottom .respuesta {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: none;
+}
+.faqs .preguntas .pregunta .pregunta-head {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  align-items: center;
+  cursor: pointer;
+}
+.faqs .preguntas .pregunta .pregunta-head img {
+  width: 100%;
+}
+.faqs .preguntas .pregunta .pregunta-head i {
+  font-size: 1.5rem;
+  justify-self: center;
+}
+
+.contacto {
+  min-height: 50vh;
+  background-color: #464458;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.contacto .title {
+  margin-bottom: 1.4rem;
+}
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  width: 90vw;
+}
+.contacto form #mc_embed_signup_scroll {
+  width: 90%;
+}
+.contacto form .mc-field-group {
+  width: 100%;
+}
+.contacto form .mc-field-group input {
+  margin-top: 1rem;
+}
+.contacto form input {
+  margin-bottom: 1rem;
+  height: 3rem;
+  border: none;
+  width: 100%;
+}
+.contacto form input[type=submit] {
+  border-radius: 20px;
+  border: none;
+  background-color: #AB9356;
+  color: white;
+  font-weight: bold;
+  width: 11rem;
+  height: 3rem;
+}
+.contacto form textarea {
+  border: none;
+}
+.contacto form a {
+  margin-top: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

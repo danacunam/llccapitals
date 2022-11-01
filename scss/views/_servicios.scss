@@ -1,0 +1,40 @@
+.servicios {
+  display: grid;
+  justify-items: center;
+  @extend .ps-3;
+  @extend .pb-3;
+  .titles {
+    
+    .title {
+      @extend .section-title;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  }
+  .servicios-cards {
+    margin-top:1rem;
+    .servicio-card {
+      display: grid;
+      box-shadow: 5px 5px 30    px -20px rgba(0,0,0,0.18);
+      border-radius:2rem;
+    padding: 2rem 0;
+
+      margin-bottom: 3rem;
+      width: 80vw;
+      grid-template-columns: 5rem 1fr;
+      .icon {
+        width: 4rem;
+        grid-column: 1/2;
+        grid-row: 1/3;
+      }
+      .service-card-title {
+        grid-column: 2/3;
+        font-size:1.3em;
+      }
+      .service-card-text {
+        grid-column: 2/3;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

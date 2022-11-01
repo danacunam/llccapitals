@@ -1,0 +1,58 @@
+a{
+    width:11rem;
+    height:3rem;
+    border-radius: 2rem;
+    font-weight:600;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+ &.primary{
+    background-color: $secondary;
+    color:white;
+    &:hover{
+      background-color: white;
+      color:$primary;
+    }
+ }
+ &.primary:visited{
+
+   background-color: $secondary;
+   color:white;
+ }
+ &.secondary{
+    background-color: white;
+    color:$primary;
+    &:hover{
+      background-color: $secondary;
+      color:white;
+    }
+ }
+
+ &.secondary:visited{
+   background-color: white;
+   color:$primary;
+ }
+
+ &.whatsapp{
+   position:sticky;
+   top: 90vh;
+   left:85vw; 
+   color:white;
+   background-color: #25D366;
+   width: 3.2rem;
+   z-index: 1;
+   opacity:0;
+   i{
+   font-size:3rem;
+}
+   &.visible{
+     
+      animation: visible 0.5s ease-in-out forwards;
+
+   }
+ }
+
+}
+

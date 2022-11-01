@@ -1,0 +1,25 @@
+.mid-banner{
+    height:55vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:white;
+    .titles{margin-top:5rem;
+    .title{color:white};}
+    @extend .ps-3;
+    background:url(../assets/nyc-empire.jpg)$primary;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: bottom center;
+    margin-bottom:3rem;
+    .buttons{
+        margin:4rem;
+        display:flex;
+        a{
+            margin: 0 1rem;
+        }
+    }
+
+}

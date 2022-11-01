@@ -1,0 +1,28 @@
+.company {
+  display: grid;
+  grid-template-rows: 6rem auto;
+  @extend .pb-3;
+  @extend .ps-3;
+
+  .title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+@extend .section-title;  }
+  .info-text {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .back-company {
+    max-width: 100%;
+    grid-column: 1/2;
+    align-self: center;
+    grid-row: 2/3;
+    filter: saturate(0);
+    opacity: 0.07;
+  }
+}

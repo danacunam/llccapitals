@@ -1,0 +1,15 @@
+@import './init/reset';
+@import './init/colores';
+
+@import './general/font-styles';
+@import './mixin/extends';
+@import './components/button';
+@import './layout/header';
+@import './animations/animations';
+
+@import './views/main';
+@import './views/company';
+@import './views/middle';
+@import './views/servicios';
+@import './views/faqs';
+@import './views/contacto';

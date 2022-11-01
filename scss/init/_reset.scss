@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size:14px;
+}
+
+@font-face {
+    font-family: 'Charlevoix pro';
+    src: url('../fonts/CharlevoixPro-Regular.otf')format(otf);
+}
+
+body{
+    font-family: Charlevoix pro, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
