@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -26,11 +27,11 @@ body {
   font-size: 1.6rem;
 }
 
-.ps-3, .contacto, .faqs, .servicios, .mid-banner, .company {
+.ps-3, .contacto, .faqs, .paquetes, .servicios, .mid-banner, .company {
   padding: 0 2rem;
 }
 
-.pb-3, .faqs, .servicios, .company {
+.pb-3, .faqs, .paquetes, .servicios, .company {
   padding-bottom: 3rem;
 }
 
@@ -48,6 +49,7 @@ a {
   align-items: center;
   text-decoration: none;
   cursor: pointer;
+  box-shadow: 2px 4px 22px -16px rgba(0, 0, 0, 0.58);
 }
 a.primary {
   background-color: #AB9356;
@@ -141,6 +143,11 @@ header ul.showMenu {
   animation: deploy 0.3s forwards ease-in-out;
 }
 
+footer {
+  height: 100px;
+  background-color: rgba(171, 147, 86, 0.1);
+}
+
 @keyframes deploy {
   0% {
     height: 0;
@@ -152,9 +159,14 @@ header ul.showMenu {
 @keyframes faqreveal {
   0% {
     height: 0;
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.2;
   }
   100% {
-    height: 100px;
+    opacity: 1;
+    height: auto;
   }
 }
 @keyframes visible {
@@ -199,7 +211,7 @@ header ul.showMenu {
 
 .company {
   display: grid;
-  grid-template-rows: 6rem auto;
+  grid-template-rows: 1.5rem auto;
 }
 .company .title {
   grid-column: 1/2;
@@ -210,9 +222,11 @@ header ul.showMenu {
 .company .info-text {
   grid-column: 1/2;
   grid-row: 2/3;
+  align-self: center;
+  text-align: justify;
 }
 .company .info-text p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .company .back-company {
   max-width: 100%;
@@ -267,11 +281,12 @@ header ul.showMenu {
   box-shadow: 5px 5px 30 px -20px rgba(0, 0, 0, 0.18);
   border-radius: 2rem;
   padding: 2rem 0;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   width: 80vw;
   grid-template-columns: 5rem 1fr;
 }
-.servicios .servicios-cards .servicio-card .icon {
+.servicios .servicios-cards .servicio-card i {
+  font-size: 3rem;
   width: 4rem;
   grid-column: 1/2;
   grid-row: 1/3;
@@ -286,14 +301,59 @@ header ul.showMenu {
   margin-top: 1rem;
 }
 
+.paquetes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.paquetes .title {
+  color: #464458;
+}
+.paquetes .paquete-card {
+  border-radius: 5px;
+  padding: 2rem 0;
+  width: 80vw;
+  margin: 2rem 0;
+  display: grid;
+  justify-items: center;
+  border: 0.2px solid rgba(70, 68, 88, 0.2);
+}
+.paquetes .paquete-card .paquete-card-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.paquetes .paquete-card a {
+  margin-bottom: 1rem;
+}
+.paquetes .paquete-card .paquete-card-price {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.paquetes .paquete-card .paquete-card-price span {
+  font-size: 2em;
+  color: #464458;
+  font-weight: 500;
+}
+.paquetes .paquete-card .paquete-card-text {
+  list-style: none;
+  border-top: 0.5px solid #AB9356;
+}
+.paquetes .paquete-card .paquete-card-text li {
+  margin: 0.5rem 0;
+}
+.paquetes .paquete-card .paquete-card-text li:before {
+  content: "✓";
+  padding-right: 1rem;
+}
+
 .faqs {
   background-color: rgba(171, 147, 86, 0.1);
   background: url(../assets/nyc-empire.jpg) rgba(171, 147, 86, 0.06);
-  background-size: contain;
+  background-size: cover;
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-position: bottom center;
-  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -306,15 +366,20 @@ header ul.showMenu {
   width: 90%;
 }
 .faqs .preguntas .pregunta {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 .faqs .preguntas .pregunta.active .pregunta-head {
   color: #AB9356;
   font-weight: 400;
 }
+.faqs .preguntas .pregunta.active .pregunta-bottom {
+  padding: 2rem 0;
+  height: auto;
+}
 .faqs .preguntas .pregunta.active .pregunta-bottom .respuesta {
-  display: block;
-  animation: faqreveal 0.5s ease forwards;
+  display: flex;
+  animation: faqreveal 0.2s ease-out forwards;
+  text-align: justify;
 }
 .faqs .preguntas .pregunta .pregunta-bottom {
   color: #464458;
@@ -323,7 +388,7 @@ header ul.showMenu {
 }
 .faqs .preguntas .pregunta .pregunta-bottom .respuesta {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 500;
   display: none;
 }
 .faqs .preguntas .pregunta .pregunta-head {

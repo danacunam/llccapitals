@@ -1,63 +1,65 @@
-.faqs{
-    background-color: rgba($secondary,.1);
+.faqs {
+  background-color: rgba($secondary, 0.1);
 
-    background:url(../assets/nyc-empire.jpg)rgba($secondary,.06);
-    background-size: contain;
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    min-height:70vh;  
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    @extend .ps-3;
-    @extend .pb-3;
-    .title{
-        margin-top:3rem;
-        @extend .section-title;
-    }
-    .preguntas{
-        margin-top: 3rem;
-        width:90%;
+  background: url(../assets/nyc-empire.jpg) rgba($secondary, 0.06);
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @extend .ps-3;
+  @extend .pb-3;
+  .title {
+    margin-top: 3rem;
+    @extend .section-title;
+  }
+  .preguntas {
+    margin-top: 3rem;
+    width: 90%;
 
-        .pregunta{
-            margin: 1rem 0;
-            &.active{
-                .pregunta-head{
-                    color:$secondary;
-                    font-weight: 400;
-                    
-                }
-                .pregunta-bottom{
-                    .respuesta{
-                        display:block;
-                        animation:faqreveal 0.5s ease forwards;
-                    }
-                }
-
-            }
-      
-        .pregunta-bottom{
-            color:$primary;
-            margin-top:0.5rem;
-            margin-bottom: 1rem;
-            .respuesta{
-            font-size:1.2rem;
-        font-weight:bold;
-            display:none;}
+    .pregunta {
+      margin: 2rem 0;
+      &.active {
+        .pregunta-head {
+          color: $secondary;
+          font-weight: 400;
         }
-        .pregunta-head{
-            display:grid;
-            grid-template-columns: 1fr 40px;
-            align-items: center;
-            cursor:pointer;
-            img{width:100%;}
-            i{
-                font-size:1.5rem;
-                justify-self: center;
-            }
-        
+        .pregunta-bottom {
+            padding: 2rem 0;
+            height:auto;
+          .respuesta {
+            display: flex;
+            animation: faqreveal 0.2s ease-out forwards;
+            text-align: justify;
+          }
         }
+      }
+
+      .pregunta-bottom {
+        color: $primary;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        .respuesta {
+          font-size: 1.2rem;
+          font-weight: 500;
+          display: none;
+        }
+      }
+      .pregunta-head {
+        display: grid;
+        grid-template-columns: 1fr 40px;
+        align-items: center;
+        cursor: pointer;
+        img {
+          width: 100%;
+        }
+        i {
+          font-size: 1.5rem;
+          justify-self: center;
+        }
+      }
     }
-    }
+  }
 }

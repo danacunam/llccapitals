@@ -91,17 +91,7 @@ const sendData = async () => {
 };
 
 
-/* form.onsubmit = (e) => {
-  e.preventDefault();
-  const formData = new FormData();
 
-  formData.append("nombre", contactData.nombre);
-  formData.append("correo", contactData.correo);
-  formData.append("mensaje", contactData.mensaje);
-  console.log(formData)
-  sendData();
-  console.log("envandose");
-}; */
 // Acordeon FAQS
 
 for (const question of questions) {
