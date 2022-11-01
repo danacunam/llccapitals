@@ -279,6 +279,7 @@ header ul.showMenu {
 .servicios .servicios-cards .servicio-card .service-card-title {
   grid-column: 2/3;
   font-size: 1.3em;
+  text-transform: uppercase;
 }
 .servicios .servicios-cards .servicio-card .service-card-text {
   grid-column: 2/3;
