@@ -1,4 +1,8 @@
 footer{
-    height:100px;
+    display:grid;
+    padding: 1rem 0 4rem 0;
     background-color: rgba($secondary,0.1);
+    justify-items:center;
+    grid-template-columns: 1fr;
+    text-align: center;
 }

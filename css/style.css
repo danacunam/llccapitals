@@ -144,8 +144,12 @@ header ul.showMenu {
 }
 
 footer {
-  height: 100px;
+  display: grid;
+  padding: 1rem 0 4rem 0;
   background-color: rgba(171, 147, 86, 0.1);
+  justify-items: center;
+  grid-template-columns: 1fr;
+  text-align: center;
 }
 
 @keyframes deploy {
