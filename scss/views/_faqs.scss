@@ -62,4 +62,7 @@
       }
     }
   }
+  @include media(sm){
+    background-attachment: fixed;
+  }
 }

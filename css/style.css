@@ -56,6 +56,10 @@ a {
   cursor: pointer;
   box-shadow: 2px 4px 22px -16px rgba(0, 0, 0, 0.58);
 }
+a.primary:visited {
+  background-color: #AB9356;
+  color: white;
+}
 a.primary {
   background-color: #AB9356;
   color: white;
@@ -63,10 +67,11 @@ a.primary {
 a.primary:hover {
   background-color: white;
   color: #464458;
+  transition: all 0.3s;
 }
-a.primary:visited {
-  background-color: #AB9356;
-  color: white;
+a.secondary:visited {
+  background-color: white;
+  color: #464458;
 }
 a.secondary {
   background-color: white;
@@ -75,10 +80,7 @@ a.secondary {
 a.secondary:hover {
   background-color: #AB9356;
   color: white;
-}
-a.secondary:visited {
-  background-color: white;
-  color: #464458;
+  transition: all 0.3s;
 }
 a.whatsapp {
   position: sticky;
@@ -231,12 +233,13 @@ footer p a {
 }
 @media screen and (min-width: 550px) {
   .main {
-    background-image: url("../assets/desktop-back.jpg");
+    background: url("../assets/desktop-back.jpg"), rgba(0, 0, 0, 0.1);
+    background-blend-mode: overlay;
     background-size: cover;
     background-position: center center;
-    height: 95vh;
-    grid-template-columns: 1.3fr 1fr;
-    grid-template-rows: 55vh auto auto auto;
+    height: 90vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 45vh auto auto auto;
     margin-bottom: 14rem;
   }
   .main .titles,
@@ -250,8 +253,16 @@ footer p a {
 .main a .title {
     width: 70%;
   }
+  .main .titles .subtitle,
+.main a .subtitle {
+    font-size: 1.4rem;
+  }
   .main a.secondary {
     margin-left: 2rem;
+  }
+  .main i.flecha {
+    position: relative;
+    top: 2rem;
   }
   .main .info-section {
     width: 700px;
@@ -261,7 +272,7 @@ footer p a {
     grid-column: 1/3;
     position: relative;
     z-index: 2;
-    bottom: 2.5rem;
+    bottom: 2rem;
     box-shadow: 2px 4px 22px -16px rgba(0, 0, 0, 0.78);
   }
   .main .info-section .left {
@@ -358,6 +369,11 @@ footer p a {
 }
 .mid-banner .buttons a {
   margin: 0 1rem;
+}
+@media screen and (min-width: 550px) {
+  .mid-banner {
+    background-attachment: fixed;
+  }
 }
 
 .servicios {
@@ -529,6 +545,11 @@ footer p a {
 .faqs .preguntas .pregunta .pregunta-head i {
   font-size: 1.5rem;
   justify-self: center;
+}
+@media screen and (min-width: 550px) {
+  .faqs {
+    background-attachment: fixed;
+  }
 }
 
 .contacto {

@@ -37,13 +37,14 @@
   }
 
   @include media(sm) {
-    background-image: url("../assets/desktop-back.jpg");
+    background: url("../assets/desktop-back.jpg"),rgba(0,0,0,0.1);
+    background-blend-mode:overlay;
     background-size: cover;
     background-position: center center;
-    height: 95vh;
-    grid-template-columns: 1.3fr 1fr;
-    grid-template-rows: 55vh auto auto auto;
-    margin-bottom:14rem;
+    height: 90vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 45vh auto auto auto;
+    margin-bottom: 14rem;
     .titles,
     a {
       grid-column: 2/3;
@@ -53,12 +54,18 @@
       .title {
         width: 70%;
       }
+      .subtitle {
+        font-size: 1.4rem;
+      }
     }
     a.secondary {
       margin-left: 2rem;
     }
+    i.flecha{
+      position: relative;
+      top: 2rem;
+    }
     .info-section {
-    
       width: 700px;
       display: grid;
       grid-template-columns: 1.5fr 2fr;
@@ -66,9 +73,8 @@
       grid-column: 1/3;
       position: relative;
       z-index: 2;
-      bottom: 2.5rem;
+      bottom: 2rem;
       box-shadow: 2px 4px 22px -16px rgb(0 0 0 / 78%);
-
 
       .left {
         background-color: $primary;
