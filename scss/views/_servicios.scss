@@ -38,4 +38,15 @@
       }
     }
   }
+  @include media(sm){
+   .servicios-cards{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 4rem 0;
+    .servicio-card{
+      width: 90%;
+      justify-self: center;
+    }
+  }
+  }
 }

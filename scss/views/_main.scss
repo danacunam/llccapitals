@@ -6,6 +6,7 @@
   background-size: cover;
   justify-items: center;
   align-items: center;
+
   .titles {
     position: relative;
     top: 3rem;
@@ -22,12 +23,82 @@
     position: relative;
     top: 5rem;
   }
- a{
-    margin-top:3rem;
- 
- i {
-    font-size: 2.5rem;
-    color: white;
+  a {
+    margin-top: 3rem;
+
+    i {
+      font-size: 2.5rem;
+      color: white;
+    }
   }
-}
+
+  .info-section {
+    display: none;
+  }
+
+  @include media(sm) {
+    background-image: url("../assets/desktop-back.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 95vh;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: 55vh auto auto auto;
+    margin-bottom:14rem;
+    .titles,
+    a {
+      grid-column: 2/3;
+      justify-self: start;
+      text-align: left;
+      margin-bottom: 1rem;
+      .title {
+        width: 70%;
+      }
+    }
+    a.secondary {
+      margin-left: 2rem;
+    }
+    .info-section {
+    
+      width: 700px;
+      display: grid;
+      grid-template-columns: 1.5fr 2fr;
+      justify-self: center;
+      grid-column: 1/3;
+      position: relative;
+      z-index: 2;
+      bottom: 2.5rem;
+      box-shadow: 2px 4px 22px -16px rgb(0 0 0 / 78%);
+
+
+      .left {
+        background-color: $primary;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        font-size: 0.7rem;
+        padding: 3rem;
+        p {
+          font-size: 1.2em;
+          margin-top: 1rem;
+        }
+      }
+      .right {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 4rem;
+
+        .servicio-card {
+          display: flex;
+          i {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
 }

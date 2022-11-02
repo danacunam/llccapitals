@@ -5,6 +5,11 @@
   box-sizing: border-box;
   font-size: 14px;
 }
+@media screen and (min-width: 550px) {
+  * {
+    font-size: 15px;
+  }
+}
 
 @font-face {
   font-family: "Charlevoix pro";
@@ -24,7 +29,7 @@ body {
 }
 
 .title {
-  font-size: 1.6rem;
+  font-size: 1.6em;
 }
 
 .ps-3, .contacto, .faqs, .paquetes, .servicios, .mid-banner, .company {
@@ -212,6 +217,73 @@ footer {
   font-size: 2.5rem;
   color: white;
 }
+.main .info-section {
+  display: none;
+}
+@media screen and (min-width: 550px) {
+  .main {
+    background-image: url("../assets/desktop-back.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 95vh;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: 55vh auto auto auto;
+    margin-bottom: 14rem;
+  }
+  .main .titles,
+.main a {
+    grid-column: 2/3;
+    justify-self: start;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  .main .titles .title,
+.main a .title {
+    width: 70%;
+  }
+  .main a.secondary {
+    margin-left: 2rem;
+  }
+  .main .info-section {
+    width: 700px;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    justify-self: center;
+    grid-column: 1/3;
+    position: relative;
+    z-index: 2;
+    bottom: 2.5rem;
+    box-shadow: 2px 4px 22px -16px rgba(0, 0, 0, 0.78);
+  }
+  .main .info-section .left {
+    background-color: #464458;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 0.7rem;
+    padding: 3rem;
+  }
+  .main .info-section .left p {
+    font-size: 1.2em;
+    margin-top: 1rem;
+  }
+  .main .info-section .right {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem;
+  }
+  .main .info-section .right .servicio-card {
+    display: flex;
+  }
+  .main .info-section .right .servicio-card i {
+    margin-right: 1rem;
+  }
+}
 
 .company {
   display: grid;
@@ -235,10 +307,20 @@ footer {
 .company .back-company {
   max-width: 100%;
   grid-column: 1/2;
-  align-self: center;
+  justify-self: center;
   grid-row: 2/3;
   filter: saturate(0);
   opacity: 0.07;
+}
+@media screen and (min-width: 550px) {
+  .company .back-company {
+    width: 20%;
+  }
+  .company .info-text {
+    width: 70%;
+    justify-self: center;
+    margin-bottom: 2rem;
+  }
 }
 
 .mid-banner {
@@ -304,6 +386,17 @@ footer {
   grid-column: 2/3;
   margin-top: 1rem;
 }
+@media screen and (min-width: 550px) {
+  .servicios .servicios-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 4rem 0;
+  }
+  .servicios .servicios-cards .servicio-card {
+    width: 90%;
+    justify-self: center;
+  }
+}
 
 .paquetes {
   display: flex;
@@ -321,6 +414,7 @@ footer {
   display: grid;
   justify-items: center;
   border: 0.2px solid rgba(70, 68, 88, 0.2);
+  box-shadow: 2px 4px 22px -16px rgba(0, 0, 0, 0.58);
 }
 .paquetes .paquete-card .paquete-card-title {
   font-size: 1.2rem;
@@ -349,6 +443,25 @@ footer {
 .paquetes .paquete-card .paquete-card-text li:before {
   content: "✓";
   padding-right: 1rem;
+}
+@media screen and (min-width: 550px) {
+  .paquetes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4rem auto;
+    justify-items: center;
+  }
+  .paquetes .titles {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .paquetes .paquetes-cards {
+    grid-row: 2/3;
+  }
+  .paquetes .paquetes-cards .paquete-card {
+    width: auto;
+    padding: 4rem;
+  }
 }
 
 .faqs {
@@ -433,11 +546,21 @@ footer {
 .contacto form #mc_embed_signup_scroll {
   width: 90%;
 }
+.contacto form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 .contacto form .mc-field-group {
   width: 100%;
 }
 .contacto form .mc-field-group input {
   margin-top: 1rem;
+}
+@media screen and (min-width: 550px) {
+  .contacto form .mc-field-group {
+    width: 50%;
+    margin: auto;
+  }
 }
 .contacto form input {
   margin-bottom: 1rem;
