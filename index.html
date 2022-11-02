@@ -8,6 +8,43 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "640846014175863");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=640846014175863&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     <title>LLCs Capitals - Llevamos tu negocio a Estados Unidos</title>
   </head>
   <body id="body">
@@ -50,19 +87,17 @@
           <a class="primary" href="#contacto">Contáctanos</a>
         </div>
         <div class="right">
-          <div class="servicio-card" >
+          <div class="servicio-card">
             <i class="fa-regular fa-handshake"></i>
-            <h4 class="service-card-title">Formación de sociedades</h4>            
+            <h4 class="service-card-title">Formación de sociedades</h4>
           </div>
           <div class="servicio-card" data-aos="flip-up">
             <i class="fa-solid fa-building-columns"></i>
             <h4 class="service-card-title">Apertura de cuenta bancaria</h4>
-        
           </div>
           <div class="servicio-card" data-aos="flip-up">
             <i class="fa-regular fa-credit-card"></i>
             <h4 class="service-card-title">Pasarela de pagos</h4>
-        
           </div>
         </div>
       </section>
@@ -335,8 +370,16 @@
 
     <footer>
       <p>LLCs Capital 2022</p>
-      <p>Tel: +54 9 11 6651-8456</p>
       <p>Email: info@llcscapital.com</p>
+      <p>Tel: +54 9 11 6651-8456</p>
+      <p>
+        Instagram:<a
+          class="ig"
+          target="_blank"
+          href="https://www.instagram.com/llcs.capital/"
+          >@llcs.capital</a
+        >
+      </p>
     </footer>
 
     <script

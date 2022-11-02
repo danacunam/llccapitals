@@ -156,6 +156,15 @@ footer {
   grid-template-columns: 1fr;
   text-align: center;
 }
+footer p {
+  display: flex;
+}
+footer p a {
+  height: auto;
+  width: auto;
+  color: black;
+  font-weight: 300;
+}
 
 @keyframes deploy {
   0% {
