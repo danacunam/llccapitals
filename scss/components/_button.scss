@@ -43,22 +43,17 @@ a{
 
 
  &.whatsapp{
-   position:sticky;
-   top: 90vh;
+   position:fixed;
+   top: 85vh;
    left:85vw; 
    color:white;
    background-color: #25D366;
    width: 3.2rem;
-   z-index: 1;
-   opacity:0;
+   z-index: 2;
    i{
    font-size:3rem;
 }
-   &.visible{
-     
-      animation: visible 0.5s ease-in-out forwards;
 
-   }
  }
 
 

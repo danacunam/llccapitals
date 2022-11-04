@@ -9,7 +9,6 @@ const form = document.getElementById("form");
 const nombre = document.getElementById("nombre");
 const email = document.getElementById("email");
 const mensaje = document.getElementById("message");
-const whatsapp = document.getElementById("whatsapp");
 const expresiones = {
   texto: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
   correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -101,11 +100,5 @@ for (const question of questions) {
   });
 }
 
-document.addEventListener('scroll', (e)=>{
-  if(window.scrollY>100) {
-    whatsapp.classList.add('visible')
-  }else{
-    whatsapp.classList.remove('visible')
-  }
-})
+
 AOS.init();

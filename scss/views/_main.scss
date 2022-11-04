@@ -14,8 +14,11 @@
     text-align: center;
     color: white;
     padding: 0 2rem;
+    text-transform: uppercase ;
+
     .subtitle {
       margin-bottom: 1rem;
+      text-transform: none;
     }
   }
 
@@ -53,9 +56,11 @@
       margin-bottom: 1rem;
       .title {
         width: 70%;
+        font-size:2rem;
       }
       .subtitle {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+        font-weight:300;
       }
     }
     a.secondary {

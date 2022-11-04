@@ -83,20 +83,16 @@ a.secondary:hover {
   transition: all 0.3s;
 }
 a.whatsapp {
-  position: sticky;
-  top: 90vh;
+  position: fixed;
+  top: 85vh;
   left: 85vw;
   color: white;
   background-color: #25D366;
   width: 3.2rem;
-  z-index: 1;
-  opacity: 0;
+  z-index: 2;
 }
 a.whatsapp i {
   font-size: 3rem;
-}
-a.whatsapp.visible {
-  animation: visible 0.5s ease-in-out forwards;
 }
 
 header {
@@ -213,9 +209,11 @@ footer p a {
   text-align: center;
   color: white;
   padding: 0 2rem;
+  text-transform: uppercase;
 }
 .main .titles .subtitle {
   margin-bottom: 1rem;
+  text-transform: none;
 }
 .main button {
   position: relative;
@@ -252,10 +250,12 @@ footer p a {
   .main .titles .title,
 .main a .title {
     width: 70%;
+    font-size: 2rem;
   }
   .main .titles .subtitle,
 .main a .subtitle {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    font-weight: 300;
   }
   .main a.secondary {
     margin-left: 2rem;
@@ -307,9 +307,10 @@ footer p a {
 
 .company {
   display: grid;
-  grid-template-rows: 1.5rem auto;
+  grid-template-rows: auto auto;
 }
 .company .title {
+  padding: 3rem 0 2rem 0;
   grid-column: 1/2;
   grid-row: 1/2;
   align-self: center;
