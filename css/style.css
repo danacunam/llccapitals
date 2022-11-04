@@ -84,15 +84,15 @@ a.secondary:hover {
 }
 a.whatsapp {
   position: fixed;
-  top: 85vh;
-  left: 85vw;
+  top: 93vh;
+  left: 86vw;
   color: white;
   background-color: #25D366;
   width: 3.2rem;
   z-index: 2;
 }
 a.whatsapp i {
-  font-size: 3rem;
+  font-size: 4.5rem;
 }
 
 header {
@@ -212,7 +212,7 @@ footer p a {
   text-transform: uppercase;
 }
 .main .titles .subtitle {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   text-transform: none;
 }
 .main button {
@@ -363,6 +363,7 @@ footer p a {
 }
 .mid-banner .titles .title {
   color: white;
+  margin-bottom: 1rem;
 }
 .mid-banner .buttons {
   margin: 4rem;
