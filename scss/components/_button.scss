@@ -1,61 +1,55 @@
-a{
-    width:11rem;
-    height:3rem;
-    border-radius: 2rem;
-    font-weight:600;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 2px 4px 22px -16px rgb(0 0 0 / 58%);
-    &.primary:visited{
-
-      background-color: $secondary;
-      color:white;
-    }
- &.primary{
+a {
+  width: 11rem;
+  height: 3rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 2px 4px 22px -16px rgb(0 0 0 / 58%);
+  &.primary:visited {
     background-color: $secondary;
-    color:white;
-    &:hover{
+    color: white;
+  }
+  &.primary {
+    background-color: $secondary;
+    color: white;
+    &:hover {
       background-color: white;
-      color:$primary;
-    transition: all 0.3s;
-
+      color: $primary;
+      transition: all 0.3s;
     }
- }
- &.secondary:visited{
-  background-color: white;
-  color:$primary;
-}
-
- &.secondary{
+  }
+  &.secondary:visited {
     background-color: white;
-    color:$primary;
-    &:hover{
+    color: $primary;
+  }
+
+  &.secondary {
+    background-color: white;
+    color: $primary;
+    &:hover {
       background-color: $secondary;
-      color:white;
-    transition: all 0.3s;
-
+      color: white;
+      transition: all 0.3s;
     }
- }
+  }
 
-
-
- &.whatsapp{
-   position:fixed;
-   top: 93vh;
-   left:86vw; 
-   color:white;
-   background-color: #25D366;
-   width: 3.2rem;
-   z-index: 2;
-   i{
-   font-size:4.5rem;
+  &.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    color: white;
+    background-color: #25d366;
+    width: 3.2rem;
+    z-index: 2;
+    i {
+      font-size: 4.5rem;
+    }
+    @include media(sm) {
+      right: 20px;
+    }
+  }
 }
-
- }
-
-
-}
-

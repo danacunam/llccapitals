@@ -84,15 +84,20 @@ a.secondary:hover {
 }
 a.whatsapp {
   position: fixed;
-  top: 93vh;
-  left: 86vw;
+  bottom: 20px;
+  right: 10px;
   color: white;
-  background-color: #25D366;
+  background-color: #25d366;
   width: 3.2rem;
   z-index: 2;
 }
 a.whatsapp i {
   font-size: 4.5rem;
+}
+@media screen and (min-width: 550px) {
+  a.whatsapp {
+    right: 20px;
+  }
 }
 
 header {
@@ -586,7 +591,8 @@ footer p a {
   width: 100%;
 }
 .contacto form .mc-field-group input {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 @media screen and (min-width: 550px) {
   .contacto form .mc-field-group {

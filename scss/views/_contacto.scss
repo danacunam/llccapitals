@@ -20,6 +20,7 @@
         width:90vw;
         #mc_embed_signup_scroll{
             width:90%;
+          
         }
         h2{
             font-size: 1.5rem;
@@ -28,7 +29,8 @@
         .mc-field-group{
             width:100%;
             input{
-                margin-top:1rem;
+                margin-top:2rem;
+                margin-bottom:1rem;
             }
             @include media(sm){
                 width: 50%;
