@@ -43,11 +43,14 @@ a {
     right: 10px;
     color: white;
     background-color: #25d366;
-    width: 3.2rem;
+    width: 3.8rem;
+    height:3.8rem;
     z-index: 2;
-    i {
-      font-size: 4.5rem;
-    }
+    box-shadow: 4px 4px 15px 1px rgba(#999,0.7);
+    font-size: 2.6rem;
+    display: flex;
+    justify-content: center;
+  
     @include media(sm) {
       right: 20px;
     }
