@@ -500,7 +500,7 @@ footer p a {
 
 .faqs {
   background-color: rgba(171, 147, 86, 0.1);
-  background: url(../assets/nyc-empire.jpg) rgba(171, 147, 86, 0.06);
+  background: url(../assets/nyc-empire.webp) rgba(171, 147, 86, 0.06);
   background-size: cover;
   background-blend-mode: overlay;
   background-repeat: no-repeat;
