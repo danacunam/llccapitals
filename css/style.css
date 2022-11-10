@@ -363,6 +363,7 @@ footer p a {
   background-size: cover;
   background-blend-mode: overlay;
   background-position: bottom center;
+  background-repeat: no-repeat;
   margin-bottom: 3rem;
 }
 .mid-banner .titles {
