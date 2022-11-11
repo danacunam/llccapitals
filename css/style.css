@@ -359,11 +359,9 @@ footer p a {
   align-items: center;
   text-align: center;
   color: white;
-  background: url(../assets/nyc-empire.webp) #464458;
+  background: url(../assets/nyc-empire-color.webp);
   background-size: cover;
-  background-blend-mode: overlay;
   background-position: bottom center;
-  background-repeat: no-repeat;
   margin-bottom: 3rem;
 }
 .mid-banner .titles {
